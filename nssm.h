@@ -63,6 +63,7 @@ int usage(int);
 const TCHAR *nssm_unquoted_imagepath();
 const TCHAR *nssm_imagepath();
 
+/*
 #define NSSM _T("NSSM")
 #ifdef _WIN64
 #define NSSM_ARCHITECTURE _T("64-bit")
@@ -75,6 +76,9 @@ const TCHAR *nssm_imagepath();
 #define NSSM_DEBUG _T("")
 #endif
 #define NSSM_CONFIGURATION NSSM_ARCHITECTURE NSSM_DEBUG
+*/
+
+#include "def.h"
 #include "version.h"
 
 /*
