@@ -1,0 +1,39 @@
+# generated files
+messages.h
+messages.rc
+version.h
+
+# visual studio
+.vs
+*.sdf
+
+# folders
+out/
+tmp/
+
+# object files
+*.slo
+*.lo
+*.o
+*.obj
+*.bin
+
+# precompiled headers
+*.gch
+*.pch
+
+# dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# executables
+*.exe
+*.out
+*.app
