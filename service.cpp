@@ -240,9 +240,11 @@ int affinity_string_to_mask(TCHAR *string, __int64 *mask) {
   return 0;
 }
 
+/* moved to header
 inline unsigned long priority_mask() {
  return REALTIME_PRIORITY_CLASS | HIGH_PRIORITY_CLASS | ABOVE_NORMAL_PRIORITY_CLASS | NORMAL_PRIORITY_CLASS | BELOW_NORMAL_PRIORITY_CLASS | IDLE_PRIORITY_CLASS;
 }
+*/
 
 int priority_constant_to_index(unsigned long constant) {
   switch (constant & priority_mask()) {
