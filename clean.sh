@@ -9,6 +9,8 @@ rm -r ./tmp
 rm version.h
 rm messages.h
 rm messages.rc
+
 rm *.bin
+rm *.sdf
 
 echo "Done"
