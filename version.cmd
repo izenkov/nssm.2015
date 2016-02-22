@@ -37,13 +37,14 @@ set md=%BUILD_ID:*-=%
 call set year=%%BUILD_ID:%md%=%%
 set year=%year:~0,-1%
 if "%BUILD_ID%" == "" set year=
+if "%year%" == "" set year=%date:~10,4%
 
 @rem Create version.h.
 @echo>version.h.new #define NSSM_VERSION _T("%description%")
 @echo>>version.h.new #define NSSM_VERSIONINFO %major%,%minor%,%n%,%BUILD_NUMBER%
 @echo>>version.h.new #define NSSM_DATE _T("%DATE%")
 @echo>>version.h.new #define NSSM_FILEFLAGS %flags%
-@echo>>version.h.new #define NSSM_COPYRIGHT _T("Public Domain; Author Iain Patterson 2003-%year%; VS2015 port Igor P. Zenkov")
+@echo>>version.h.new #define NSSM_COPYRIGHT _T("Public Domain; Author Iain Patterson 2003-%year%)
 
 fc version.h version.h.new >NUL: 2>NUL:
 if %ERRORLEVEL% == 0 (del version.h.new) else (move /y version.h.new version.h)
