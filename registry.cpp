@@ -189,7 +189,7 @@ int create_parameters(nssm_service_t *service, bool editing) {
 int create_exit_action(TCHAR *service_name, const TCHAR *action_string, bool editing) {
   /* Get registry */
   TCHAR registry[KEY_LENGTH];
-  if (_sntprintf_s(registry, _countof(registry), _TRUNCATE, NSSM_REGISTRY _T("\\%s"), service_name, NSSM_REG_EXIT) < 0) {
+  if (_sntprintf_s(registry, _countof(registry), _TRUNCATE, NSSM_REGISTRY _T("\\%s\\%s"), service_name, NSSM_REG_PARAMETERS, NSSM_REG_EXIT) < 0) {
     log_event(EVENTLOG_ERROR_TYPE, NSSM_EVENT_OUT_OF_MEMORY, _T("NSSM_REG_EXIT"), _T("create_exit_action()"), 0);
     return 1;
   }
