@@ -1058,8 +1058,7 @@ int get_setting(const TCHAR *service_name, HKEY key, settings_t *setting, value_
       break;
 
     case REG_DWORD:
-      #pragma warning (suppress: 4267)
-      value->numeric = (size_t)setting->default_value;
+      value->numeric = PtrToUlong(setting->default_value);
       if (setting->get) ret = setting->get(service_name, (void *) key, setting->name, setting->default_value, value, additional);
       else ret = -1;
       break;
