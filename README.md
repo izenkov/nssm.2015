@@ -1,5 +1,3 @@
-Original [NSSM](https://nssm.cc) Git repository is [here](https://git.nssm.cc/?p=nssm.git).
-
 NSSM port to Visual Studio 2015
 -----------------------------------
 
