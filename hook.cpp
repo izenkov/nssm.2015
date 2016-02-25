@@ -323,7 +323,7 @@ int nssm_hook(hook_thread_t *hook_threads, nssm_service_t *service, TCHAR *hook_
 
   TCHAR cmd[CMD_LENGTH];
   if (get_hook(service->name, hook_event, hook_action, cmd, sizeof(cmd))) {
-    log_event(EVENTLOG_ERROR_TYPE, NSSM_EVENT_GET_HOOK_FAILED, hook_event, hook_action, service->name, 0);
+    log_event(EVENTLOG_INFORMATION_TYPE, NSSM_EVENT_GET_HOOK_FAILED, hook_event, hook_action, service->name, 0);
     unset_service_environment(service);
     LeaveCriticalSection(&service->hook_section);
     HeapFree(GetProcessHeap(), 0, hook);
