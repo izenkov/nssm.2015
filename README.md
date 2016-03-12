@@ -21,9 +21,7 @@ Log:
 Mar 12, 2016 Latest sync with the Iain's originar repository.
 
 Merged LF -> CRLF changes, and new '.gitattributes' file.
-
 Iain finally fixed almost all of the compiler/linker warnings (just one left), good.
-
 He also fixed "Failed to open registry key HKLM\SYSTEM\CurrentControlSet\Services\<servicename>\Parameters\AppExit.
 
 Unfortunately, the registry changes I did not sync because registering just one hook results in a number of errors
